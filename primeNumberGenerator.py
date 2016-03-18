@@ -6,8 +6,8 @@ Created on Mon Mar 14 02:16:10 2016
 """
 
 def genPrimes():
-    '''Have the generator keep a list of the primes it's generated. 
-    A candidate number x is prime if (x % p) != 0 for all earlier primes p.'''
+    '''The generator keeps a list of the primes it has generated. 
+    A candidate number i is prime if (i % p) != 0 for all earlier primes p.'''
     i=1
     primes=[]
     while(True):
@@ -20,9 +20,5 @@ def genPrimes():
           yield i
 
 primeGenerator = genPrimes()
-print primeGenerator.next()
-print primeGenerator.next()
-print primeGenerator.next()
-print primeGenerator.next()
-print primeGenerator.next()
-print primeGenerator.next()
+for p in range(10):                        # will print first 10 prime numbers
+    print primeGenerator.next()
